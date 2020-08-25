@@ -5,3 +5,5 @@ powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://raw.gi
 
 
 # Run this line in Powershell, or a Command Prompt window, to run your Github script remotely.
+
+# This version is for public repos, a different method is required for private repos.
