@@ -29,16 +29,13 @@ $spotify = https://download.scdn.co/SpotifySetup.exe
 $mediaplayer = https://github.com/clsid2/mpc-hc/releases/download/1.9.7/MPC-HC.1.9.7.x64.exe
 $7zip = https://www.7-zip.org/a/7z1900-x64.exe
 
-# Power setting template (included in my custom .iso)
-
-$powerconfig = C:\maxpower.pow
 
 # Other
 
 
 # Pre-run checker to check that the user is using the correct iso file. 
 
-if(Test-Path C:\maxpower.pow) {
+if(Test-Path C:\Setup\maxpower.pow) {
     Write-Host 'The script is now starting'
 }else {
     Write-Host 'Incorrect .iso file used, script is now exiting.'
