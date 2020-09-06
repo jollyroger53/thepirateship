@@ -1,3 +1,6 @@
+## WORK IN PROGRESS ##
+
+
 ### This script is intended to be run on fresh installs of Windows 10 to apply specific settings, registry tweaks, power settings, install programs, etc. This script can also be used as a template and tailored for your own liking. 
 ### This script has been tailored to my personal preferences, if you want to tweak it feel free to fork or download the script and modify it yourself. For example, I've chosen 'Brave' as my browser of choice, but if you'd prefer Firefox for example, replace the "$browser" variable with the download URL for Firefox.
 
