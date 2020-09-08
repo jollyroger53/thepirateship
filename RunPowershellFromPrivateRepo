@@ -1,0 +1,19 @@
+# Uses Powershell to call GitHub's API to run scripts locally, authenticating with an access token.
+
+# Replace 'SCRIPT' in the URI with the file you desire to run remotely.
+# Replace 'USERNAME' with your username.
+# Replace 'REPO' with your repository.
+# Replace 'INSERT ACCESS TOKEN HERE' with your access token.
+
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+$URI = "https://api.github.com/repos/USERNAME/REPO/contents/SCRIPT"
+$Token = "INSERT ACCESS TOKEN HERE"
+$Headers = @{
+    accept = "application/vnd.github.v3.raw"
+    authorization = "Token " + "$Token"
+}
+
+$Script = Invoke-RestMethod -Uri $URI -Headers $Headers
+
+Invoke-Expression $Script
