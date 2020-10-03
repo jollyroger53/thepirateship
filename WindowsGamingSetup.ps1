@@ -102,3 +102,14 @@ if($option -eq 'Y') {
 
 # Text editor installation
 
+Write-Host "Do you want to download and install $texteditor ? Y/N"
+$option = Read-Host
+if($option -eq 'Y') {
+    Write-Host "Downloading $texteditor installer..."
+    Invoke-WebRequest "$notepadpp" -Outfile $directory\$notepadinstaller
+    Write-Host "Installing $texteditor silently."
+    $directory\$notepadinstaller /S
+}else {
+    Write-Host "Skipping $texteditor download."
+}
+
